@@ -1,4 +1,4 @@
-# Création d'un image
+# Création d'une image
 
 ## 1) Commande de base
 
@@ -32,3 +32,21 @@ Suppression d'une image:
     > Deleted: f03f3645bde1a45143056ad6bc9d352199f13cdb01c6d59a1c972432c9fc7e97
     > Deleted: 9302827ed0a51fe7f0cacb08e970b13c09da240ae8c4a8b559fb38e430f6be13
     > Deleted: 48731f0a6276cfb5d94a8f18690d56f88a586e701f1dd7f56889f26be990277d
+
+Visualisation des containers en train de s'executer:
+
+    docker ps
+
+Visualisation de tous les containers:
+
+    docker ps -a
+
+## 2) Création d'une image
+
+A partir de rien:
+
+    tar cv --files-from /dev/null | docker import - simon/scratch
+
+A partir d'un fichier Dockerfile:
+
+   docker build --tag="simon/scratch:2" .
