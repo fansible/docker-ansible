@@ -2,6 +2,9 @@
 
 ## 1) Commande de base
 
+    docker info
+    docker version
+
 Récupération d'une image:
 
     docker pull ubuntu
